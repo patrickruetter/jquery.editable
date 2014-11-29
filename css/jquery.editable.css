@@ -1,0 +1,35 @@
+.editable:hover {
+    background-color: rgb(232, 232, 232);
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+}
+
+.editable-controls {
+    position: relative;
+}
+
+.editable-controls textarea {
+    box-sizing: border-box;
+    border: 1px dashed black;
+    padding: 0;
+    margin: 0;
+}
+
+.editable-controls button {
+    position: absolute;
+    bottom: -20px;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    z-index: 10;
+}
+
+.editable-controls .editable-ok {
+    left: 0;
+}
+
+.editable-controls .editable-cancel {
+    left: 35px;
+}
+
