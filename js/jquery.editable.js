@@ -12,9 +12,9 @@
 
     var pluginName = "editable",
         defaults = {
-            onSave: function (element) {
+            onSave: function () {
             },
-            onCancel: function (element) {
+            onCancel: function () {
             }
         };
 
@@ -89,6 +89,9 @@
             $editableElement.html(editable.currentHtml);
             $editableControls.remove();
             $editableElement.show();
+            console.log(editable)
+
+            editable.options.onSave();
         },
 
         cancelHandler: function (event, editable) {
@@ -97,6 +100,8 @@
 
             $editableElement.show();
             $editableControls.remove();
+
+            editable.options.onCancel();
         }
 
     };
